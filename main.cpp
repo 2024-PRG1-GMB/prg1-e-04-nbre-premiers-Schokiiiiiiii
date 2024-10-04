@@ -56,5 +56,5 @@ int main()
     cout << endl
          << "Fin du programme..." << endl;
 
-    return EXIT_SUCCESS;;
+    return EXIT_SUCCESS;
 }
