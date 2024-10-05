@@ -17,7 +17,8 @@ int main()
               limiteMax = 1000;
 
     int limite, // limite donnée par l'utilisateur
-        retourLigne=0;
+        countColonnes,
+        nbColonnes = 5;
 
     char restart;
 
@@ -25,27 +26,28 @@ int main()
          << "jusqu'a une limite (comprise) fixee par l'utilisateur." << endl;
 
     do {
-        // saisie
+        countColonnes = 0;
+        // saisie utilisateur
         do {
             cout << endl;
             cout << "Veuillez entrer la limite (2 <= n <= 1'000) : ";
             cin >> limite;
         } while (limite < limiteMin || limite > limiteMax);
 
-        // calcul algorithmique...
+        // calcul algorithmique
         cout << endl;
         for (int i=2; i<=limite; ++i) {
             for(int j=2; (i%j!=0 || j==i) && j<=i; ++j) {
                 if (j==i) {
-                    ++retourLigne;
+                    ++countColonnes;
+
                     cout << '\t' << i << " ";
-                    if (retourLigne%5==0) { cout << endl; }
+                    if (countColonnes%nbColonnes==0) { cout << endl; }
                 }
             }
         }
 
         // restart
-
         do {
             cout << endl;
             cout << "Voulez-vous recommencer [O/N] :";
