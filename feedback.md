@@ -1,0 +1,4 @@
+- Pas de constante pour les entrées utilisateur ('O' et 'N')
+- Affichage non comforme à ce qui est demandé dans la consigne
+- Veuillez à plus soigner l'indentation de votre code, et gardez les même choix pour l'ensemble de votre code
+- La prochaine fois, inclure les fichiers de compilation cmake dans votre repo!
